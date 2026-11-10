@@ -47,12 +47,12 @@ Um listener global (`document.addEventListener('click', ...)`) intercepta clique
 
 ## 📊 Eventos Auditados no Google Analytics 4
 
-| Nome do Evento GA4 | Quando é Disparado | Parâmetros Enviados |
+| Nome do Evento GA4 | Quando é Disparado | Parâmetros / Finalidade |
 | :--- | :--- | :--- |
-| `typebot_preview_sector_shown` | Quando o visitante fica 8s em uma seção e o bot exibe a chamada contextual | `secao`, `mensagem` |
-| `typebot_chat_opened` | Quando o visitante clica para abrir a janela de conversa do bot | `secao` (`secao_ativa`) |
-| `click_whatsapp` | Quando o visitante clica em qualquer botão de redirecionamento para o WhatsApp | `unidade`, `nome_botao`, `link_destino`, `pagina` |
-| `generate_lead` | Disparado junto ao clique de WhatsApp para contabilização oficial de conversão no GA4 | `event_category`, `event_label`, `value`, `currency` |
+| `click_whatsapp` | Quando o visitante clica em qualquer botão ou link de redirecionamento para o WhatsApp | `unidade`, `nome_botao`, `link_destino`, `pagina` |
+| `generate_lead` | Disparado junto ao clique de WhatsApp para contabilização oficial de conversão (Lead) no GA4 | `event_category` (`WhatsApp Lead`), `event_label`, `value`, `currency` |
+| `user_engagement` / `scroll` | Quando o visitante navega e permanece lendo as seções técnicas da página (gatilho de engajamento) | Tempo de engajamento e profundidade de leitura |
+| `click` | Interações de clique em links externos e chamadas de ação | Rastreamento complementar de cliques de saída |
 
 ---
 
